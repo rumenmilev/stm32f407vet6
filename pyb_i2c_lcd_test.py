@@ -12,7 +12,7 @@ DEFAULT_I2C_ADDR = 0x27
 def test_main():
     """Test function for verifying basic functionality."""
     print("Running test_main")
-    i2c = I2C(2, I2C.MASTER, baudrite = 400000)	#1 chanel i2c -> scl = PB6, sda = PB7  2 chanel i2c -> scl = PB10, sda = PB11
+    i2c = I2C(2, I2C.MASTER, baudrite = 400000)	#1 chanel i2c -> scl = PB6, sda = PB7  2 chanel i2c -> scl = PB11, sda = PB10
     lcd = I2cLcd(i2c, DEFAULT_I2C_ADDR, 4, 20)
     lcd.putstr("It Works!\nSecond Line")
     delay(3000)
